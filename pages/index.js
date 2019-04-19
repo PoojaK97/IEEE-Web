@@ -12,6 +12,8 @@ import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import Link from 'next/link';
 
+import AppBar from '../components/bar';
+import SimpleBottomNavigation from '../components/bottom';
 const styles = theme => ({
   root: {
     textAlign: 'center',
@@ -42,6 +44,7 @@ class Index extends React.Component {
 
     return (
       <div className={classes.root}>
+        <AppBar />
         <Dialog open={open} onClose={this.handleClose}>
           <DialogTitle>Super Secret Password</DialogTitle>
           <DialogContent>
@@ -67,6 +70,8 @@ class Index extends React.Component {
         <Button variant="contained" color="secondary" onClick={this.handleClick}>
           Super Secret Password
         </Button>
+        <div className='hello' style={{'height':'100vw'}}></div>
+        <SimpleBottomNavigation />
       </div>
     );
   }
