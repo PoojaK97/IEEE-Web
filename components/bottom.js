@@ -14,7 +14,8 @@ export const styles = theme=>({
     [theme.breakpoints.down('xs')]:{
       display:'flex',
       position:'fixed',
-      bottom:0
+      bottom:0,
+      zIndex:1000,
     }
   },
 });
