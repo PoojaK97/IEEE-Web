@@ -17,7 +17,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
-
+import TemporaryDrawer from '../components/home';
 import SimpleBottomNavigation from '../components/bottom';
 
 const drawerWidth = 200;
@@ -151,6 +151,7 @@ class ResponsiveDrawer extends React.Component {
           </nav>
           <main className={classes.content}>
             <div className={classes.toolbar} />
+            <TemporaryDrawer name='hello'/>
             <Typography paragraph>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent
