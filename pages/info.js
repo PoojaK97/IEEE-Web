@@ -7,7 +7,6 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import SwipeableTextMobileStepper from '../components/carousel';
-
 export function TabContainer({ children, dir }) {
   return (
     <Typography component="div" dir={dir} style={{ padding: 8 * 3 }}>
@@ -23,8 +22,10 @@ TabContainer.propTypes = {
 
 export const styles = theme => ({
   root: {
-    backgroundColor: theme.palette.background.paper,
-    width: 500,
+    margin:'auto',
+    backgroundColor: '#f0f0f0',
+    maxWidth: 800,
+
   },
 });
 
@@ -46,6 +47,7 @@ class FullWidthTabs extends React.Component {
 
     return (
       <div className={classes.root}>
+        <Typography variant='h3'>{'Women in Engineering'}</Typography>
         <AppBar position="static" color="default">
           <Tabs
             value={this.state.value}
@@ -54,9 +56,9 @@ class FullWidthTabs extends React.Component {
             textColor="primary"
             variant="fullWidth"
           >
-            <Tab label="Item One" />
-            <Tab label="Item Two" />
-            <Tab label="Item Three" />
+            <Tab label="Events" />
+            <Tab label="Workshops" />
+            <Tab label="Talks" />
           </Tabs>
         </AppBar>
         <SwipeableViews
@@ -64,9 +66,14 @@ class FullWidthTabs extends React.Component {
           index={this.state.value}
           onChangeIndex={this.handleChangeIndex}
         >
-          <SwipeableTextMobileStepper />
-          <TabContainer dir={theme.direction}>Item One</TabContainer>
-          <TabContainer dir={theme.direction}>Item Two</TabContainer>
+
+          <TabContainer dir={theme.direction}>
+            <SwipeableTextMobileStepper />
+          </TabContainer>
+
+          <TabContainer dir={theme.direction}>
+            <SwipeableTextMobileStepper />
+          </TabContainer>
           <TabContainer dir={theme.direction}>Item Three</TabContainer>
         </SwipeableViews>
       </div>
