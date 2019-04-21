@@ -43,7 +43,7 @@ class SimpleBottomNavigation extends React.Component {
         className={classes.root}
       >
         <BottomNavigationAction label="RITB" icon={<LocationOnIcon />} />
-        <BottomNavigationAction onClick={this.props.menu} label="Menu" icon={<MenuIcon />} />
+        <BottomNavigationAction onClick={this.props.open} label="Menu" icon={<MenuIcon />} />
         <BottomNavigationAction label="IEEE" icon={<LocationOnIcon />} />
       </BottomNavigation>
     );
