@@ -23,8 +23,10 @@ TabContainer.propTypes = {
 
 export const styles = theme => ({
   root: {
+    display:'block',
     backgroundColor: theme.palette.background.paper,
-    width: 500,
+    width: '80vw',
+
   },
 });
 

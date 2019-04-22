@@ -37,6 +37,7 @@ const styles = theme => ({
     },
   },
   appBar: {
+    backgroundColor: '#fff',
     marginLeft: drawerWidth,
     [theme.breakpoints.up('md')]: {
       width: `calc(100% - ${drawerWidth}px)`,
@@ -58,6 +59,7 @@ const styles = theme => ({
   content: {
     flexGrow: 1,
     padding: theme.spacing.unit * 3,
+    marginTop:'70px'
   },
   bottom:{
     width:'100%',
@@ -75,7 +77,9 @@ class ResponsiveDrawer extends React.Component {
     mobileOpen: false,
     open:false
   };
-
+  sub=()=>{
+    return (this.props.notification?('subscribed'):('not subscribed'))
+  }
   handleDrawerToggle = () => {
     this.setState(state => ({ mobileOpen: !state.mobileOpen }));
   };
@@ -94,22 +98,18 @@ class ResponsiveDrawer extends React.Component {
         <div className={classes.toolbar} />
         <Divider />
         <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+          {['Home', 'Events', 'Team', 'Contact',this.props.User==null?("login"):("logout")].map((text, index) => (
+            <ListItem style={{'paddingLeft':'40px'}} onClick={this.props.login} button key={text}>
               <ListItemText primary={text} />
             </ListItem>
+
           ))}
+          {this.props.User!=null && (<ListItem style={{'paddingLeft':'40px'}} onClick={this.props.subscribe} button key={this.props.notification?'subscirbed':'not subscirbed'}>
+            <ListItemText primary={this.props.notification?'subscirbed':'not subscirbed'} />
+          </ListItem>)
+          }
         </List>
-        <Divider />
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
+
       </div>
     );
 
@@ -127,9 +127,7 @@ class ResponsiveDrawer extends React.Component {
               >
                 <MenuIcon />
               </IconButton>
-              <Typography variant="h6" color="inherit" noWrap>
-                Responsive drawer
-              </Typography>
+              <img height='50px' src='/static/iconh.png'></img>
             </Toolbar>
           </AppBar>
           <nav className={classes.drawer}>
@@ -162,6 +160,7 @@ class ResponsiveDrawer extends React.Component {
           </nav>
           <main className={classes.content}>
             <div className={classes.toolbar} />
+
             {this.props.children}
             <TemporaryDrawer op={this.state.open} tog={this.cl}/>
 

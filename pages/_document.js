@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Document, { Head, Main, NextScript } from 'next/document';
 import flush from 'styled-jsx/server';
+import Manifest from 'next-manifest/manifest';
+
 
 class MyDocument extends Document {
   render() {
@@ -10,17 +12,13 @@ class MyDocument extends Document {
     return (
       <html lang="en" dir="ltr">
         <Head>
+
           <meta charSet="utf-8" />
           {/* Use minimum-scale=1 to enable GPU rasterization */}
-          <meta
-            name="viewport"
-            content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
-          />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+					<Manifest themeColor='#000000' />
           {/* PWA primary color */}
-          <meta
-            name="theme-color"
-            content={pageContext ? pageContext.theme.palette.primary.main : null}
-          />
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
@@ -29,6 +27,7 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+
         </body>
       </html>
     );
@@ -73,12 +72,6 @@ MyDocument.getInitialProps = ctx => {
     return WrappedComponent;
   });
 
-  let css;
-  // It might be undefined, e.g. after an error.
-  if (pageContext) {
-    css = pageContext.sheetsRegistry.toString();
-  }
-
   return {
     ...page,
     pageContext,
@@ -88,7 +81,7 @@ MyDocument.getInitialProps = ctx => {
         <style
           id="jss-server-side"
           // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{ __html: css }}
+          dangerouslySetInnerHTML={{ __html: pageContext.sheetsRegistry.toString() }}
         />
         {flush() || null}
       </React.Fragment>

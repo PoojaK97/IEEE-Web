@@ -6,7 +6,10 @@ import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
+
 import SwipeableTextMobileStepper from '../components/carousel';
+import Cardy from '../components/cards'
+
 export function TabContainer({ children, dir }) {
   return (
     <Typography component="div" dir={dir} style={{ padding: 8 * 3 }}>
@@ -67,14 +70,15 @@ class FullWidthTabs extends React.Component {
           onChangeIndex={this.handleChangeIndex}
         >
 
-          <TabContainer dir={theme.direction}>
-            <SwipeableTextMobileStepper />
+          <TabContainer dir={theme.direction}>1
+          </TabContainer>
+
+          <TabContainer dir={theme.direction}>2
           </TabContainer>
 
           <TabContainer dir={theme.direction}>
-            <SwipeableTextMobileStepper />
+            <Cardy />
           </TabContainer>
-          <TabContainer dir={theme.direction}>Item Three</TabContainer>
         </SwipeableViews>
       </div>
     );

@@ -54,9 +54,13 @@ export const styles = theme => ({
     paddingLeft: theme.spacing.unit * 4,
     backgroundColor: theme.palette.background.default,
   },
+  imb:{
+    display:'block',
+    maxWidth:'80%',
+  },
   img: {
     maxHeight: 400,
-    display: 'block',
+    display: 'flex',
     maxWidth: 800,
     overflow: 'hidden',
     width: '100%',
@@ -99,7 +103,7 @@ class SwipeableTextMobileStepper extends React.Component {
           enableMouseEvents
         >
           {tutorialSteps.map((step, index) => (
-            <div key={step.label}>
+            <div className={classes.imb} key={step.label}>
               {Math.abs(activeStep - index) <= 2 ? (
                 <img className={classes.img} src={step.imgPath} alt={step.label} />
               ) : null}
