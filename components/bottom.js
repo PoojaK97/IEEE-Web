@@ -25,7 +25,7 @@ class SimpleBottomNavigation extends React.Component {
     super(props);
   }
   state = {
-    value: 0,
+    value: 1,
   };
 
   handleChange = (event, value) => {
@@ -43,9 +43,9 @@ class SimpleBottomNavigation extends React.Component {
         showLabels
         className={classes.root}
       >
-        <BottomNavigationAction label="RITB" icon={<LocationOnIcon />} />
+        <BottomNavigationAction label="RITB" target="_blank" href='http://msrit.edu' icon={<LocationOnIcon />} />
         <BottomNavigationAction onClick={this.props.open} label="Menu" icon={<MenuIcon />} />
-        <BottomNavigationAction label="IEEE" icon={<LocationOnIcon />} />
+        <BottomNavigationAction label="IEEE" target="_blank" href='https://www.ieee.org/' icon={<LocationOnIcon />} />
       </BottomNavigation>
     );
   }
