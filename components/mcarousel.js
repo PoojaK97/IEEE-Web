@@ -75,7 +75,10 @@ export const styles = theme => ({
     display: 'flex',
     maxWidth: 700,
     overflow: 'hidden',
-    width: '200%',
+    width: '80vw',
+    [theme.breakpoints.down('md')]:{
+      width:'85vw'
+    }
   },
 });
 

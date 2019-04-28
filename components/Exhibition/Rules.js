@@ -43,28 +43,28 @@ class Rules extends React.Component {
       >
           <List component="div" disablePadding>
             <ListItem className={classes.nested} >
-              <ListItemText inset secondary="Teams must be formed by 25th April 2019."/>
+              <ListItemText  secondary="Teams must be formed by 25th April 2019."/>
             </ListItem>
             <ListItem className={classes.nested}>
-              <ListItemText inset secondary="The teams must use only Arduino Uno 3-5 members in a team."/>
+              <ListItemText  secondary="The teams must use only Arduino Uno 3-5 members in a team."/>
             </ListItem>
             <ListItem className={classes.nested}>
-              <ListItemText inset secondary="The team must meet the deadlines and no extension shall be provided under any circumstances."/>
+              <ListItemText  secondary="The team must meet the deadlines and no extension shall be provided under any circumstances."/>
             </ListItem>
             <ListItem className={classes.nested}>
-              <ListItemText inset secondary="The team must submit their idea in the form of a basic draft approved by their mentor."/>
+              <ListItemText  secondary="The team must submit their idea in the form of a basic draft approved by their mentor."/>
             </ListItem>
             <ListItem className={classes.nested}>
-              <ListItemText inset secondary="The Arduino(s) and cable(s) ONLY shall be provided by IEEE-RITB (if required) and MUST be  returned after the exhibition."/>
+              <ListItemText  secondary="The Arduino(s) and cable(s) ONLY shall be provided by IEEE-RITB (if required) and MUST be  returned after the exhibition."/>
             </ListItem>
             <ListItem className={classes.nested}>
-              <ListItemText inset secondary="The final documentation of the project also must be submitted on the day of exhibition."/>
+              <ListItemText  secondary="The final documentation of the project also must be submitted on the day of exhibition."/>
             </ListItem>
             <ListItem className={classes.nested}>
-              <ListItemText inset secondary="The teams are free to use their own components."/>
+              <ListItemText  secondary="The teams are free to use their own components."/>
             </ListItem>
             <ListItem className={classes.nested}>
-              <ListItemText inset secondary="Certificates will be provided for competition as long as the project is exhibited at the event."/>
+              <ListItemText  secondary="Certificates will be provided for competition as long as the project is exhibited at the event."/>
             </ListItem>
         </List>
         </List>

@@ -35,14 +35,12 @@ const firebaseCloudMessaging = {
         messaging.onTokenRefresh(function() {
         messaging.getToken().then(function(refreshedToken) {
           firebase.database().ref('users/' + uid).remove()
-          sendTokenToServer(refreshedToken);
           firebase.database().ref('users/').set({
             uid:{
               token:token
             }
         });
         }).catch(function(err) {
-          console.log('Unable to retrieve refreshed token ', err);
           showToken('Unable to retrieve refreshed token ', err);
         });
       });

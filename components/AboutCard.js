@@ -30,6 +30,7 @@ export const styles = theme => ({
   },
   actions: {
     display: 'flex',
+    border:'solid grey 0.02px'
   },
   expand: {
     transform: 'rotate(0deg)',
@@ -70,17 +71,16 @@ class AboutCardy extends React.Component {
         />
         <CardContent>
           <Typography component="p">
-          One of the most prominent and dynamic society of Ramaiah Institute of Technology, IEEE RIT-B was inaugurated in the year 2003. Since then, it has made constant endeavors to enrich the students with the various happenings in the field of technology and research. It has ensured that the students’ competency meets all the required industry standards. Handled by a team of highly skilled members, collectively called the Exe-Coms, the club aspires to encourage students from various branches to actively participate and interact with people of different skill-set in their respective fields and therefore learn in the process.
+            One of the most prominent and dynamic society of Ramaiah Institute of Technology, IEEE RIT-B was inaugurated in the year 2003. Since then, it has made constant endeavors to enrich the students with the various happenings in the field of technology and research. It has ensured that the students’ competency meets all the required industry standards. Handled by a team of highly skilled members, collectively called the Exe-Coms, the club aspires to encourage students from various branches to actively participate and interact with people of different skill-set in their respective fields and therefore learn in the process.
 
           </Typography>
         </CardContent>
-        <CardActions className={classes.actions} disableActionSpacing>
-          <Typography variant='h7' margin='auto'>IEEE RIT-B CHAPTERS</Typography>
+        <CardActions onClick={this.handleExpandClick} className={classes.actions} disableActionSpacing>
+          <Typography  variant='h7' margin='auto'>IEEE RIT-B CHAPTERS</Typography>
           <IconButton
             className={classnames(classes.expand, {
               [classes.expandOpen]: this.state.expanded,
             })}
-            onClick={this.handleExpandClick}
             aria-expanded={this.state.expanded}
             aria-label="Show more"
           >

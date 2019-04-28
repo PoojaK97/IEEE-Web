@@ -30,6 +30,7 @@ TabContainer.propTypes = {
 export const styles = theme => ({
   root: {
     margin:'auto',
+    padding:'0',
     backgroundColor: '#f0f0f0',
     maxWidth: 800,
 
@@ -77,7 +78,7 @@ class Chapters extends React.Component {
           <TabContainer dir={theme.direction}>
             <Typography>IEEE Women in Engineering (WIE) is one of the largest international professional organizations dedicated to promoting women engineers and scientists, and inspiring girls around the world to follow their academic interests in a career in engineering. The WIE in IEEE initiative focuses on bringing together and highlighting all women in tech activities happening across IEEE.</Typography>
           </TabContainer>
-        
+
           <TabContainer dir={theme.direction}>
             <Typography>The Power & Energy Society (PES) provides the world’s largest forum for sharing the latest in technological developments in the electric power industry. It strives to advance innovation, education and applied research in both robotics and automation. Robotic research emphasises intelligence and adaptability to cope with unstructured environments.</Typography>
           </TabContainer>
@@ -89,7 +90,7 @@ class Chapters extends React.Component {
           <TabContainer dir={theme.direction}>
             <Typography>The IEEE Computational Intelligence Society(CIS) is a professional society of the IEEE focussing on the theory, design, application, and development of biologically and linguistically motivated computational paradigms emphasizing neural networks, connectionist systems, genetic algorithms, evolutionary programming, fuzzy systems, and hybrid intelligent systems in which these paradigms are contained.</Typography>
           </TabContainer>
-            
+
         </SwipeableViews>
       </div>
     );

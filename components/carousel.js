@@ -42,9 +42,11 @@ export const tutorialSteps = [
 
 export const styles = theme => ({
   root: {
-    margin:'auto',
+    margin:'0',
+    padding:'0',
     maxWidth: 800,
     flexGrow: 1,
+    flexShrink:1
   },
   header: {
     display: 'block',
@@ -52,16 +54,17 @@ export const styles = theme => ({
     height: 120,
     paddingTop: '20px',
     paddingLeft: theme.spacing.unit * 4,
+    paddingRight: theme.spacing.unit * 4,
     backgroundColor: theme.palette.background.default,
   },
   imb:{
-    display:'block',
-    maxWidth:'80%',
+    paddingRight:0,
+    width:'100%',
   },
   img: {
-    maxHeight: 400,
-    display: 'flex',
-    maxWidth: 800,
+    height: 255,
+    display: 'block',
+    maxWidth: 400,
     overflow: 'hidden',
     width: '100%',
   },

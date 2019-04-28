@@ -38,7 +38,6 @@ export const styles = theme => ({
   },
   expand: {
     transform: 'rotate(0deg)',
-    marginLeft: 'auto',
     transition: theme.transitions.create('transform', {
       duration: theme.transitions.duration.shortest,
     }),
@@ -92,92 +91,92 @@ class PastEvent extends React.Component {
           title="Paella dish"
         />
         <CardContent>
-            <List
-                component="nav"
-                subheader={<ListSubheader component="div">Click to know more about our past events</ListSubheader>}
-                className={classes.root}
-            >
-                <ListItem button onClick={this.handleClick1}>
-                <ListItemText inset primary="ARDUINO WORKSHOP 2019" />
-                {this.state.open1 ? <ExpandLess /> : <ExpandMore />}
+          <List
+            component="nav"
+            subheader={<ListSubheader component="div">Click to know more about our past events</ListSubheader>}
+            className={classes.root}
+          >
+            <ListItem button onClick={this.handleClick1}>
+              <ListItemText  primary="ARDUINO WORKSHOP 2019" />
+              {this.state.open1 ? <ExpandLess /> : <ExpandMore />}
+            </ListItem>
+            <Collapse in={this.state.open1} timeout="auto" unmountOnExit>
+              <List component="div" disablePadding>
+                <ListItem className={classes.nested} >
+                  <ListItemText  primary="Debutant" secondary="This is for students who are new to robotics and have no prior experience in the field but
+                    are curious to explore the possibilities it offers.
+                  "/>
                 </ListItem>
-                <Collapse in={this.state.open1} timeout="auto" unmountOnExit>
-                <List component="div" disablePadding>
-                    <ListItem className={classes.nested} >
-                    <ListItemText inset primary="Debutant" secondary="This is for students who are new to robotics and have no prior experience in the field but
-                        are curious to explore the possibilities it offers.
-                        "/>
-                    </ListItem>
-                    <ListItem className={classes.nested}>
-                    <ListItemText inset primary="Specialiste" />
-                    </ListItem>
-                </List>
-                </Collapse>
-                <ListItem button onClick={this.handleClick2}>
-                <ListItemText inset primary="WIE 2019" />
-                {this.state.open2 ? <ExpandLess /> : <ExpandMore />}
+                <ListItem className={classes.nested}>
+                  <ListItemText  primary="Specialiste" />
                 </ListItem>
-                <Collapse in={this.state.open2} timeout="auto" unmountOnExit>
-                <List component="div" disablePadding>
-                    <ListItem className={classes.nested} >
-                    <ListItemText inset primary="Debutant" secondary="This is for students who are new to robotics and have no prior experience in the field but
-                        are curious to explore the possibilities it offers.
-                        "/>
-                    </ListItem>
-                    <ListItem className={classes.nested}>
-                    <ListItemText inset primary="Specialiste" />
-                    </ListItem>
-                </List>
-                </Collapse>
-                <ListItem button onClick={this.handleClick3}>
-                <ListItemText inset primary="PCB WORKSHOP 2019" />
-                {this.state.open3 ? <ExpandLess /> : <ExpandMore />}
+              </List>
+            </Collapse>
+            <ListItem button onClick={this.handleClick2}>
+              <ListItemText primary="WIE 2019" />
+              {this.state.open2 ? <ExpandLess /> : <ExpandMore />}
+            </ListItem>
+            <Collapse in={this.state.open2} timeout="auto" unmountOnExit>
+              <List component="div" disablePadding>
+                <ListItem className={classes.nested} >
+                  <ListItemText  primary="Debutant" secondary="This is for students who are new to robotics and have no prior experience in the field but
+                    are curious to explore the possibilities it offers.
+                  "/>
                 </ListItem>
-                <Collapse in={this.state.open3} timeout="auto" unmountOnExit>
-                <List component="div" disablePadding>
-                    <ListItem className={classes.nested} >
-                    <ListItemText inset primary="Debutant" secondary="This is for students who are new to robotics and have no prior experience in the field but
-                        are curious to explore the possibilities it offers.
-                        "/>
-                    </ListItem>
-                    <ListItem className={classes.nested}>
-                    <ListItemText inset primary="Specialiste" />
-                    </ListItem>
-                </List>
-                </Collapse>
-                <ListItem button onClick={this.handleClick4}>
-                <ListItemText inset primary="AGM MEET 2019" />
-                {this.state.open4 ? <ExpandLess /> : <ExpandMore />}
+                <ListItem className={classes.nested}>
+                  <ListItemText  primary="Specialiste" />
                 </ListItem>
-                <Collapse in={this.state.open4} timeout="auto" unmountOnExit>
-                <List component="div" disablePadding>
-                    <ListItem className={classes.nested} >
-                    <ListItemText inset primary="Debutant" secondary="This is for students who are new to robotics and have no prior experience in the field but
-                        are curious to explore the possibilities it offers.
-                        "/>
-                    </ListItem>
-                    <ListItem className={classes.nested}>
-                    <ListItemText inset primary="Specialiste" />
-                    </ListItem>
-                </List>
-                </Collapse>
-                <ListItem button onClick={this.handleClick5}>
-                <ListItemText inset primary="AAVISHKAAR 2018" />
-                {this.state.open5 ? <ExpandLess /> : <ExpandMore />}
+              </List>
+            </Collapse>
+            <ListItem button onClick={this.handleClick3}>
+              <ListItemText primary="PCB WORKSHOP 2019" />
+              {this.state.open3 ? <ExpandLess /> : <ExpandMore />}
+            </ListItem>
+            <Collapse in={this.state.open3} timeout="auto" unmountOnExit>
+              <List component="div" disablePadding>
+                <ListItem className={classes.nested} >
+                  <ListItemText  primary="Debutant" secondary="This is for students who are new to robotics and have no prior experience in the field but
+                    are curious to explore the possibilities it offers.
+                  "/>
                 </ListItem>
-                <Collapse in={this.state.open5} timeout="auto" unmountOnExit>
-                <List component="div" disablePadding>
-                    <ListItem className={classes.nested} >
-                    <ListItemText inset primary="Debutant" secondary="This is for students who are new to robotics and have no prior experience in the field but
-                        are curious to explore the possibilities it offers.
-                        "/>
-                    </ListItem>
-                    <ListItem className={classes.nested}>
-                    <ListItemText inset primary="Specialiste" />
-                    </ListItem>
-                </List>
-                </Collapse>
-                </List>
+                <ListItem className={classes.nested}>
+                  <ListItemText  primary="Specialiste" />
+                </ListItem>
+              </List>
+            </Collapse>
+            <ListItem button onClick={this.handleClick4}>
+              <ListItemText primary="AGM MEET 2019" />
+              {this.state.open4 ? <ExpandLess /> : <ExpandMore />}
+            </ListItem>
+            <Collapse in={this.state.open4} timeout="auto" unmountOnExit>
+              <List component="div" disablePadding>
+                <ListItem className={classes.nested} >
+                  <ListItemText  primary="Debutant" secondary="This is for students who are new to robotics and have no prior experience in the field but
+                    are curious to explore the possibilities it offers.
+                  "/>
+                </ListItem>
+                <ListItem className={classes.nested}>
+                  <ListItemText  primary="Specialiste" />
+                </ListItem>
+              </List>
+            </Collapse>
+            <ListItem button onClick={this.handleClick5}>
+              <ListItemText primary="AAVISHKAAR 2018" />
+              {this.state.open5 ? <ExpandLess /> : <ExpandMore />}
+            </ListItem>
+            <Collapse in={this.state.open5} timeout="auto" unmountOnExit>
+              <List component="div" disablePadding>
+                <ListItem className={classes.nested} >
+                  <ListItemText  primary="Debutant" secondary="This is for students who are new to robotics and have no prior experience in the field but
+                    are curious to explore the possibilities it offers.
+                  "/>
+                </ListItem>
+                <ListItem className={classes.nested}>
+                  <ListItemText  primary="Specialiste" />
+                </ListItem>
+              </List>
+            </Collapse>
+          </List>
         </CardContent>
       </Card>
     );

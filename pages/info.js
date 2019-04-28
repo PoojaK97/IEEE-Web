@@ -25,10 +25,10 @@ TabContainer.propTypes = {
 
 export const styles = theme => ({
   root: {
-    margin:'auto',
+    margin:'10px',
     backgroundColor: '#f0f0f0',
     maxWidth: 800,
-
+    width:'90%'
   },
 });
 

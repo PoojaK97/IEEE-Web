@@ -36,15 +36,14 @@ class Stages extends React.Component {
     return (
       <List
         component="nav"
-        subheader={<ListSubheader component="div">The event will be scheduled in two main stages:
-        </ListSubheader>}
+        subheader={'The event will be scheduled in two main stages:'}
       >
           <List component="div" disablePadding>
             <ListItem className={classes.nested}>
-              <ListItemText inset primary="Project Review" secondary="In this stage, students will build their projects adhering to some basic rules and regulations under the guidance of their mentor. (Mentor will be assigned to every team who will only guide and supervise the project to make sure of its progress). The projects will be evaluated before exhibiting them."/>
+              <ListItemText  primary="Project Review" secondary="In this stage, students will build their projects adhering to some basic rules and regulations under the guidance of their mentor. (Mentor will be assigned to every team who will only guide and supervise the project to make sure of its progress). The projects will be evaluated before exhibiting them."/>
             </ListItem>
             <ListItem className={classes.nested}>
-              <ListItemText inset primary="Project Exhibition" secondary="This is the final stage where your projects will be displayed and shall be reviewed by the judges. All the participants must be ready with a presentable project and a copy of documentation of it for submissions.The winners will be declared and will be awarded certificate and exciting cash prizes. The decision of the judges will be the final. Also, all the participants shall receive the participation certificate."/>
+              <ListItemText  primary="Project Exhibition" secondary="This is the final stage where your projects will be displayed and shall be reviewed by the judges. All the participants must be ready with a presentable project and a copy of documentation of it for submissions.The winners will be declared and will be awarded certificate and exciting cash prizes. The decision of the judges will be the final. Also, all the participants shall receive the participation certificate."/>
             </ListItem>
         </List>
         </List>

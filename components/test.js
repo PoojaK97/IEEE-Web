@@ -25,6 +25,7 @@ const drawerWidth = 200;
 const styles = theme => ({
   root: {
     display: 'flex',
+    margin:'auto',
     [theme.breakpoints.down('xs')]:{
       overFlow:'scroll'
     }
@@ -59,6 +60,12 @@ const styles = theme => ({
   },
   content: {
     flexGrow: 1,
+    margin:'auto',
+    [theme.breakpoints.down('md')]: {
+      flexGrow:0,
+      flexShrink:1,
+      marign:'auto'
+    },
     padding: theme.spacing.unit * 3,
     marginTop:'20px'
   },

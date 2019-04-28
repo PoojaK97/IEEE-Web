@@ -94,11 +94,13 @@ class Index extends React.Component{
     return (
       <ResponsiveDrawer notification={this.state.notification} subscribe={this.subscribe} loggedIn={this.loggedIn}
         login={this.login} User={this.state.User}>
-        <MainCarousel/>
-        <AboutCardy/>
-        <PastEvent/>
-        <ExhibitionCard/>
-      </ResponsiveDrawer>
+        <div style={{'width':'85vw','margin':'auto','display':'flexShrink'}}>
+          <MainCarousel/>
+          <AboutCardy/>
+          <PastEvent/>
+          <ExhibitionCard/>
+        </div>
+        </ResponsiveDrawer>
     )
   }
 
