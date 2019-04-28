@@ -40,8 +40,7 @@ export const tutorialSteps = [
   {
     label: 'WIE 2019',
     text: '',
-    imgPath:
-      'https://drive.google.com/open?id=0Bz8ly3zE2tnObF9KaGw1RFA4R3c',
+    image="'/static/WIE_RIT.png'"
   },
   {
     label: 'WIE 2018 Magazine Released!! VIEW NOW',
