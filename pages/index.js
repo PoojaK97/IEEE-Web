@@ -76,7 +76,7 @@ class Index extends React.Component{
   }
 
   componentDidMount(){
-    //firebaseCloudMessaging.init();
+    firebaseCloudMessaging.init();
 
     var user=JSON.parse(localStorage.getItem('User'))
     if (user!==null){
