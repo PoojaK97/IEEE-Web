@@ -24,6 +24,7 @@ import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import AboutCard from './AboutCard';
+import WIE from './PastEvents/WIE';
 
 export const styles = theme => ({
   card: {
@@ -116,7 +117,7 @@ class PastEvent extends React.Component {
                 <Collapse in={this.state.open2} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
                     <ListItem className={classes.nested} >
-                    <AboutCard/>
+                    <WIE/>
                     </ListItem>
                 </List>
                 </Collapse>
