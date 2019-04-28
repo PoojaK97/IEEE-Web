@@ -68,7 +68,8 @@ class Aavishkaar extends React.Component {
         <CardContent>
             <SwipeableTextMobileStepper/>
           <Typography component="p">
-            One of the most prominent and dynamic society of Ramaiah Institute of Technology, IEEE RIT-B was inaugurated in the year 2003. Since then, it has made constant endeavors to enrich the students with the various happenings in the field of technology and research. It has ensured that the students’ competency meets all the required industry standards. Handled by a team of highly skilled members, collectively called the Exe-Coms, the club aspires to encourage students from various branches to actively participate and interact with people of different skill-set in their respective fields and therefore learn in the process.
+          The annual flagship event of IEEE, Ramaiah Institute of Technology was held on the 6th and 7th of October 2018. Sponsored by AMD, AAVISHKAAR had a total of 12 intercollegiate events with exciting cash prizes conducted from 9am to 5pm spread across the two days. In addition to this, there were Fun event stalls set up which was a major crowd attraction. 
+
 
           </Typography>
         </CardContent>

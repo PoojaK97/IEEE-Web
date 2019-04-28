@@ -70,7 +70,11 @@ class PCB extends React.Component {
         />
         <CardContent>
           <Typography component="p">
-            One of the most prominent and dynamic society of Ramaiah Institute of Technology, IEEE RIT-B was inaugurated in the year 2003. Since then, it has made constant endeavors to enrich the students with the various happenings in the field of technology and research. It has ensured that the students’ competency meets all the required industry standards. Handled by a team of highly skilled members, collectively called the Exe-Coms, the club aspires to encourage students from various branches to actively participate and interact with people of different skill-set in their respective fields and therefore learn in the process.
+        Nowadays the knowledge of various fields has become very important to engineers for the sake of
+        their internships and placements. In these, the knowledge of designing Printed Circuit Board (PCB)
+        has become one of the major prerequisite for various companies. In the light of this, IEEE RITB
+        had organized a PCB design workshop in accordance with B-AUTOMATE, a start-up on embedded
+        technology by students of BMSCE.
 
           </Typography>
         </CardContent>
