@@ -3,6 +3,11 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import classnames from 'classnames';
 import Card from '@material-ui/core/Card';
+import ListSubheader from '@material-ui/core/ListSubheader';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
@@ -12,6 +17,8 @@ import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import red from '@material-ui/core/colors/red';
+import ExpandLess from '@material-ui/icons/ExpandLess';
+import ExpandMore from '@material-ui/icons/ExpandMore';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
@@ -45,11 +52,30 @@ export const styles = theme => ({
 });
 
 class PastEvent extends React.Component {
-  state = { expanded: false };
-
-  handleExpandClick = () => {
-    this.setState(state => ({ expanded: !state.expanded }));
+  state = {
+    open1: false,
+    open2: false,
+    open3: false,
+    open4: false,
+    open5: false,
   };
+
+  handleClick1 = () => {
+    this.setState(state => ({ open1: !state.open1 }));
+  };
+  handleClick2 = () => {
+    this.setState(state => ({ open2: !state.open2 }));
+  };
+  handleClick3 = () => {
+    this.setState(state => ({ open3: !state.open3 }));
+  };
+  handleClick4 = () => {
+    this.setState(state => ({ open4: !state.open4 }));
+  };
+  handleClick5 = () => {
+    this.setState(state => ({ open5: !state.open5 }));
+  };
+
 
   render() {
     const { classes } = this.props;
@@ -63,29 +89,96 @@ class PastEvent extends React.Component {
         />
         <CardMedia
           className={classes.media}
-          image=""
           title="Paella dish"
         />
         <CardContent>
+            <List
+                component="nav"
+                subheader={<ListSubheader component="div">Click to know more about our past events</ListSubheader>}
+                className={classes.root}
+            >
+                <ListItem button onClick={this.handleClick1}>
+                <ListItemText inset primary="ARDUINO WORKSHOP 2019" />
+                {this.state.open1 ? <ExpandLess /> : <ExpandMore />}
+                </ListItem>
+                <Collapse in={this.state.open1} timeout="auto" unmountOnExit>
+                <List component="div" disablePadding>
+                    <ListItem className={classes.nested} >
+                    <ListItemText inset primary="Debutant" secondary="This is for students who are new to robotics and have no prior experience in the field but
+                        are curious to explore the possibilities it offers.
+                        "/>
+                    </ListItem>
+                    <ListItem className={classes.nested}>
+                    <ListItemText inset primary="Specialiste" />
+                    </ListItem>
+                </List>
+                </Collapse>
+                <ListItem button onClick={this.handleClick2}>
+                <ListItemText inset primary="WIE 2019" />
+                {this.state.open2 ? <ExpandLess /> : <ExpandMore />}
+                </ListItem>
+                <Collapse in={this.state.open2} timeout="auto" unmountOnExit>
+                <List component="div" disablePadding>
+                    <ListItem className={classes.nested} >
+                    <ListItemText inset primary="Debutant" secondary="This is for students who are new to robotics and have no prior experience in the field but
+                        are curious to explore the possibilities it offers.
+                        "/>
+                    </ListItem>
+                    <ListItem className={classes.nested}>
+                    <ListItemText inset primary="Specialiste" />
+                    </ListItem>
+                </List>
+                </Collapse>
+                <ListItem button onClick={this.handleClick3}>
+                <ListItemText inset primary="PCB WORKSHOP 2019" />
+                {this.state.open3 ? <ExpandLess /> : <ExpandMore />}
+                </ListItem>
+                <Collapse in={this.state.open3} timeout="auto" unmountOnExit>
+                <List component="div" disablePadding>
+                    <ListItem className={classes.nested} >
+                    <ListItemText inset primary="Debutant" secondary="This is for students who are new to robotics and have no prior experience in the field but
+                        are curious to explore the possibilities it offers.
+                        "/>
+                    </ListItem>
+                    <ListItem className={classes.nested}>
+                    <ListItemText inset primary="Specialiste" />
+                    </ListItem>
+                </List>
+                </Collapse>
+                <ListItem button onClick={this.handleClick4}>
+                <ListItemText inset primary="AGM MEET 2019" />
+                {this.state.open4 ? <ExpandLess /> : <ExpandMore />}
+                </ListItem>
+                <Collapse in={this.state.open4} timeout="auto" unmountOnExit>
+                <List component="div" disablePadding>
+                    <ListItem className={classes.nested} >
+                    <ListItemText inset primary="Debutant" secondary="This is for students who are new to robotics and have no prior experience in the field but
+                        are curious to explore the possibilities it offers.
+                        "/>
+                    </ListItem>
+                    <ListItem className={classes.nested}>
+                    <ListItemText inset primary="Specialiste" />
+                    </ListItem>
+                </List>
+                </Collapse>
+                <ListItem button onClick={this.handleClick5}>
+                <ListItemText inset primary="AAVISHKAAR 2018" />
+                {this.state.open5 ? <ExpandLess /> : <ExpandMore />}
+                </ListItem>
+                <Collapse in={this.state.open5} timeout="auto" unmountOnExit>
+                <List component="div" disablePadding>
+                    <ListItem className={classes.nested} >
+                    <ListItemText inset primary="Debutant" secondary="This is for students who are new to robotics and have no prior experience in the field but
+                        are curious to explore the possibilities it offers.
+                        "/>
+                    </ListItem>
+                    <ListItem className={classes.nested}>
+                    <ListItemText inset primary="Specialiste" />
+                    </ListItem>
+                </List>
+                </Collapse>
+                </List>
         </CardContent>
-        <CardActions className={classes.actions} disableActionSpacing>
-          <Typography variant='h7' margin='auto'>ARDUINO WORKSHOP</Typography>
-          <IconButton
-            className={classnames(classes.expand, {
-              [classes.expandOpen]: this.state.expanded,
-            })}
-            onClick={this.handleExpandClick}
-            aria-expanded={this.state.expanded}
-            aria-label="Show more"
-          >
-            <ExpandMoreIcon />
-          </IconButton>
-        </CardActions>
-        <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
-          <CardContent>
-              
-          </CardContent>
-        </Collapse>
       </Card>
     );
   }
