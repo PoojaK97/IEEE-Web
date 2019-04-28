@@ -62,7 +62,8 @@ class Aavishkaar extends React.Component {
       <Card className={classes.card}>
         <CardHeader
 
-          title="GALLERY"
+          title="AAVISHKAAR 2018"
+          
           //subheader="sub"
         />
         <CardContent>
