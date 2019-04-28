@@ -106,14 +106,17 @@ class ResponsiveDrawer extends React.Component {
         <div className={classes.toolbar} />
         <Divider />
         <List>
-          {['Home', 'Events', 'Team', 'Contact',this.props.User==null?("login"):("logout")].map((text, index) => (
-            <ListItem style={{'paddingLeft':'40px'}} onClick={this.props.login} button key={text}>
+          {['Home', 'Events', 'Team', 'Contact'].map((text, index) => (
+            <ListItem style={{'paddingLeft':'40px'}} component='a' href={"#"+text} button key={text}>
               <ListItemText primary={text} />
             </ListItem>
 
           ))}
+          <ListItem style={{'paddingLeft':'40px'}} onClick={this.props.login} button key={'login'}>
+            <ListItemText primary={this.props.User?'logout':'login'} />
+          </ListItem>
           {this.props.User!=null && (<ListItem style={{'paddingLeft':'40px'}} onClick={this.props.subscribe} button key={this.props.notification?'subscirbed':'not subscirbed'}>
-            <ListItemText primary={this.props.notification?'subscirbed':'not subscirbed'} />
+            <ListItemText primary={this.props.notification?'unsubscribed':'subscribed'} />
           </ListItem>)
           }
         </List>
@@ -170,7 +173,7 @@ class ResponsiveDrawer extends React.Component {
             <div className={classes.toolbar} />
 
             {this.props.children}
-            <TemporaryDrawer op={this.state.open} tog={this.cl}/>
+            <TemporaryDrawer User={this.props.User} subscribe={this.props.subscribe} notification={this.props.notification} login={this.props.login} op={this.state.open} tog={this.cl}/>
 
           </main>
         </div>
