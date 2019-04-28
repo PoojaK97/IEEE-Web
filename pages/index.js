@@ -94,15 +94,6 @@ class Index extends React.Component{
     return (
       <ResponsiveDrawer notification={this.state.notification} subscribe={this.subscribe} loggedIn={this.loggedIn}
         login={this.login} User={this.state.User}>
-        {typeof navigator !='undefined' && <button onClick={()=>{
-          navigator.share({
-            title: 'Web Fundamentals',
-            text: 'Check out Web Fundamentals — it rocks!',
-            url: 'https://developers.google.com/web',
-          })
-          .then(() => console.log('Successful share'))
-          .catch((error) => console.log('Error sharing', error));
-        }}>jkhjk</button>}
         <MainCarousel/>
         <AboutCardy/>
         <PastEvent/>
