@@ -25,6 +25,9 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import AboutCard from './AboutCard';
 import WIE from './PastEvents/WIE';
+import PCB from './PastEvents/PCB';
+import AGM from './PastEvents/AGM';
+import Workshop from './PastEvents/Workshop';
 
 export const styles = theme => ({
   card: {
@@ -102,20 +105,13 @@ class PastEvent extends React.Component {
               <ListItemText  primary="ARDUINO WORKSHOP 2019" />
               {this.state.open1 ? <ExpandLess /> : <ExpandMore />}
             </ListItem>
-            <Collapse in={this.state.open1} timeout="auto" unmountOnExit>
-              <List component="div" disablePadding>
-                <ListItem className={classes.nested} >
-                  <ListItemText  primary="Debutant" secondary="This is for students who are new to robotics and have no prior experience in the field but
-                    are curious to explore the possibilities it offers.
-                  "/>
-                </ListItem>
                 <Collapse in={this.state.open1} timeout="auto" unmountOnExit>
                   <List component="div" disablePadding>
                     <ListItem className={classes.nested} >
-                      <AboutCard/>
+                      <Workshop/>
                     </ListItem>
                   </List>
-                </Collapse>
+            </Collapse>
                 <ListItem button onClick={this.handleClick2}>
                   <ListItemText  primary="WIE 2019" secondary="" />
                   {this.state.open2 ? <ExpandLess /> : <ExpandMore />}
@@ -134,7 +130,7 @@ class PastEvent extends React.Component {
                 <Collapse in={this.state.open3} timeout="auto" unmountOnExit>
                   <List component="div" disablePadding>
                     <ListItem className={classes.nested} >
-                      <AboutCard/>
+                      <PCB/>
                     </ListItem>
                   </List>
                 </Collapse>
@@ -145,7 +141,7 @@ class PastEvent extends React.Component {
                 <Collapse in={this.state.open4} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
                     <ListItem className={classes.nested} >
-                    <AboutCard/>
+                    <AGM/>
                     </ListItem>
                 </List>
                 </Collapse>
@@ -154,14 +150,15 @@ class PastEvent extends React.Component {
                 {this.state.open5 ? <ExpandLess /> : <ExpandMore />}
                 </ListItem>
                 <Collapse in={this.state.open5} timeout="auto" unmountOnExit>
-                <List component="div" disablePadding>
-                    <ListItem className={classes.nested} >
-                    <AboutCard/>
-                    <ListItemText  primary="Specialiste" />
-                    </ListItem>
-                </List>
+                  <List component="div" disablePadding>
+                      <ListItem className={classes.nested} >
+                      <AboutCard/>
+                      <ListItemText  primary="Specialiste" />
+                      </ListItem>
+                  </List>
                 </Collapse>
                 </List>
+                
         </CardContent>
       </Card>
     );

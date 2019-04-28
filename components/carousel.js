@@ -64,7 +64,7 @@ export const styles = theme => ({
   img: {
     height: 255,
     display: 'block',
-    maxWidth: 400,
+    maxWidth: 800,
     overflow: 'hidden',
     width: '100%',
   },

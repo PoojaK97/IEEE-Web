@@ -46,7 +46,7 @@ export const styles = theme => ({
   },
 });
 
-class PCB extends React.Component {
+class AGM extends React.Component {
   state = { expanded: false };
 
   handleExpandClick = () => {
@@ -79,8 +79,8 @@ class PCB extends React.Component {
   }
 }
 
-PCB.propTypes = {
+AGM.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(PCB);
+export default withStyles(styles)(AGM);
