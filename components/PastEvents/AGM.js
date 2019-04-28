@@ -65,7 +65,7 @@ class AGM extends React.Component {
         />
         <CardMedia
           className={classes.media}
-          image="'/static/AGM.png"
+          image='/static/AGM.png'
          
         />
         <CardContent>
