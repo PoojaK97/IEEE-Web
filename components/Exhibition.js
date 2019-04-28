@@ -70,7 +70,7 @@ class ExhibitionCard extends React.Component {
         />
         <CardContent>
           <Typography component="p">
-          Aren’t we all fascinated with robots? Here is an opportunity for all the beginners. Come, learn,implement and innovate! Mini Project Competition is an initiative of the RoboRIT Club of IEEE-RITB. Open to all the first and second-year students from all branches, it provides a platform for emerging innovations in the field of robotics
+          Aren’t we all fascinated with robots? Here is an opportunity for all the beginners. Come, learn, implement and innovate! Mini Project Competition is an initiative of the RoboRIT Club of IEEE-RITB. Open to all the first and second-year students from all branches, it provides a platform for emerging innovations in the field of robotics
           </Typography>
         </CardContent>
           <CardContent>

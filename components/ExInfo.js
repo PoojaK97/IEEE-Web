@@ -11,6 +11,9 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Categories from './Exhibition/Categories';
+import Stages from './Exhibition/Stages';
+import Rules from './Exhibition/Rules';
+import Procedure from './Exhibition/Procedure';
 
 export function TabContainer({ children, dir }) {
   return (
@@ -64,7 +67,6 @@ class ExInfo extends React.Component {
             <Tab label="Categories" />
             <Tab label="Rules" />
             <Tab label="Procedure" />
-            <Tab label="Payment" />
           </Tabs>
         </AppBar>
         <SwipeableViews
@@ -74,19 +76,14 @@ class ExInfo extends React.Component {
         >
 
           <TabContainer dir={theme.direction}>
+            <Stages/>
           </TabContainer>
             <Categories/>
           <TabContainer dir={theme.direction}>
-          </TabContainer>
-            
-          <TabContainer dir={theme.direction}>
-            
+            <Rules/>
           </TabContainer>
           <TabContainer dir={theme.direction}>
-            
-          </TabContainer>
-          <TabContainer dir={theme.direction}>
-            
+            <Procedure/>
           </TabContainer>
         </SwipeableViews>
       </div>
