@@ -65,7 +65,7 @@ class ExhibitionCard extends React.Component {
         />
         <CardMedia
           className={classes.media}
-          image="'/static/mp.png'"
+          image='/static/mp.png'
           
         />
         <CardContent>
