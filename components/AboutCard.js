@@ -17,6 +17,7 @@ import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Chapters from './Chapters'
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import { ListItemIcon } from '@material-ui/core';
 
 export const styles = theme => ({
   card: {
@@ -74,6 +75,7 @@ class AboutCardy extends React.Component {
           </Typography>
         </CardContent>
         <CardActions className={classes.actions} disableActionSpacing>
+          <Typography variant='h7' margin='auto'>IEEE RIT-B CHAPTERS</Typography>
           <IconButton
             className={classnames(classes.expand, {
               [classes.expandOpen]: this.state.expanded,
