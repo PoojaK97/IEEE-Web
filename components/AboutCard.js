@@ -66,8 +66,8 @@ class AboutCardy extends React.Component {
         />
         <CardMedia
           className={classes.media}
-          image=""
-          title="Paella dish"
+          image="'/static/about.jpg'"
+          
         />
         <CardContent>
           <Typography component="p">
