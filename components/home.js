@@ -65,23 +65,26 @@ class TemporaryDrawer extends React.Component {
 
     const fullList = (
       <div className={classes.fullList}>
-        <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
+        <div>
+          <div className={classes.toolbar} />
+          <Divider />
+          <List>
+            {['Home', 'Events', 'Team', 'Contact'].map((text, index) => (
+              <ListItem  style={{'paddingLeft':'40px'}}  component='a' href={"#"+text} button key={text}>
+                <ListItemText primary={text} />
+              </ListItem>
+
+            ))}
+            <ListItem style={{'paddingLeft':'40px'}}  onClick={this.props.login} button key={'login'}>
+              <ListItemText primary={this.props.User?'logout':'login'} />
             </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {['All mail', 'Trash', 'Spam','Return' ].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{(index % 2 === 0) ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
+            {this.props.User!=null && (<ListItem style={{'paddingLeft':'40px'}} onClick={this.props.subscribe} button key={this.props.notification?'subscirbed':'not subscirbed'}>
+              <ListItemText primary={this.props.notification?'unsubscribed':'subscribed'} />
+            </ListItem>)
+            }
+          </List>
+
+        </div>
       </div>
     );
 

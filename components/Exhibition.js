@@ -65,8 +65,8 @@ class ExhibitionCard extends React.Component {
         />
         <CardMedia
           className={classes.media}
-          image="https://drive.google.com/file/d/1KNKpYm5cGHXa7nVibb6NCMqbM8WkHJEm/view?usp=sharing"
-          title="Paella dish"
+          image="'/static/mp.png'"
+          
         />
         <CardContent>
           <Typography component="p">

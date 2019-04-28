@@ -106,59 +106,59 @@ class PastEvent extends React.Component {
               <ListItemText  primary="ARDUINO WORKSHOP 2019" />
               {this.state.open1 ? <ExpandLess /> : <ExpandMore />}
             </ListItem>
-                <Collapse in={this.state.open1} timeout="auto" unmountOnExit>
-                  <List component="div" disablePadding>
-                    <ListItem className={classes.nested} >
-                      <Workshop/>
-                    </ListItem>
-                  </List>
+            <Collapse in={this.state.open1} timeout="auto" unmountOnExit>
+              <List component="div" disablePadding>
+                <ListItem className={classes.nested} >
+                  <Workshop/>
+                </ListItem>
+              </List>
             </Collapse>
-                <ListItem button onClick={this.handleClick2}>
-                  <ListItemText  primary="WIE 2019" secondary="" />
-                  {this.state.open2 ? <ExpandLess /> : <ExpandMore />}
+            <ListItem button onClick={this.handleClick2}>
+              <ListItemText  primary="WIE 2019" secondary="" />
+              {this.state.open2 ? <ExpandLess /> : <ExpandMore />}
+            </ListItem>
+            <Collapse in={this.state.open2} timeout="auto" unmountOnExit>
+              <List component="div" disablePadding>
+                <ListItem className={classes.nested} >
+                  <WIE/>
                 </ListItem>
-                <Collapse in={this.state.open2} timeout="auto" unmountOnExit>
-                  <List component="div" disablePadding>
-                    <ListItem className={classes.nested} >
-                      <WIE/>
-                    </ListItem>
+              </List>
+            </Collapse>
+            <ListItem button onClick={this.handleClick3}>
+              <ListItemText  primary="PCB WORKSHOP 2019" />
+              {this.state.open3 ? <ExpandLess /> : <ExpandMore />}
+            </ListItem>
+            <Collapse in={this.state.open3} timeout="auto" unmountOnExit>
+              <List component="div" disablePadding>
+                <ListItem className={classes.nested} >
+                  <PCB/>
+                </ListItem>
+              </List>
+            </Collapse>
+            <ListItem button onClick={this.handleClick4}>
+              <ListItemText  primary="AGM MEET 2019" />
+              {this.state.open4 ? <ExpandLess /> : <ExpandMore />}
+            </ListItem>
+            <Collapse in={this.state.open4} timeout="auto" unmountOnExit>
+              <List component="div" disablePadding>
+                <ListItem className={classes.nested} >
+                  <AGM/>
+                </ListItem>
+              </List>
+            </Collapse>
+            <ListItem button onClick={this.handleClick5}>
+              <ListItemText  primary="AAVISHKAAR 2018" />
+              {this.state.open5 ? <ExpandLess /> : <ExpandMore />}
+            </ListItem>
+            <Collapse in={this.state.open5} timeout="auto" unmountOnExit>
+              <List component="div" disablePadding>
+                <ListItem className={classes.nested} >
+                  <Aavishkaar/>
+                </ListItem>
                   </List>
                 </Collapse>
-                <ListItem button onClick={this.handleClick3}>
-                  <ListItemText  primary="PCB WORKSHOP 2019" />
-                  {this.state.open3 ? <ExpandLess /> : <ExpandMore />}
-                </ListItem>
-                <Collapse in={this.state.open3} timeout="auto" unmountOnExit>
-                  <List component="div" disablePadding>
-                    <ListItem className={classes.nested} >
-                      <PCB/>
-                    </ListItem>
-                  </List>
-                </Collapse>
-                <ListItem button onClick={this.handleClick4}>
-                <ListItemText  primary="AGM MEET 2019" />
-                {this.state.open4 ? <ExpandLess /> : <ExpandMore />}
-                </ListItem>
-                <Collapse in={this.state.open4} timeout="auto" unmountOnExit>
-                <List component="div" disablePadding>
-                    <ListItem className={classes.nested} >
-                    <AGM/>
-                    </ListItem>
                 </List>
-                </Collapse>
-                <ListItem button onClick={this.handleClick5}>
-                <ListItemText  primary="AAVISHKAAR 2018" />
-                {this.state.open5 ? <ExpandLess /> : <ExpandMore />}
-                </ListItem>
-                <Collapse in={this.state.open5} timeout="auto" unmountOnExit>
-                  <List component="div" disablePadding>
-                      <ListItem className={classes.nested} >
-                      <Aavishkaar/>
-                      </ListItem>
-                  </List>
-                </Collapse>
-                </List>
-                
+
         </CardContent>
       </Card>
     );

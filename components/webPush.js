@@ -27,19 +27,16 @@ const firebaseCloudMessaging = {
         const token = await messaging.getToken()
 
         localStorage.setItem('fcm_token', token)
-          firebase.database().ref('users/').set({
-            uid:{
+          firebase.database().ref('users/'+uid).set({
               token:token
-            }
+
         });
         messaging.onTokenRefresh(function() {
         messaging.getToken().then(function(refreshedToken) {
           firebase.database().ref('users/' + uid).remove()
-          firebase.database().ref('users/').set({
-            uid:{
-              token:token
-            }
-        });
+          firebase.database().ref('users/'+uid).set({
+            token:token
+                    });
         }).catch(function(err) {
           showToken('Unable to retrieve refreshed token ', err);
         });
