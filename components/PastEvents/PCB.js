@@ -60,7 +60,7 @@ class PCB extends React.Component {
       <Card className={classes.card}>
         <CardHeader
 
-          title="About Us"
+          title="PRINTED CIRCUIT BOARD WORKSHOP"
           //subheader="sub"
         />
         <CardMedia
