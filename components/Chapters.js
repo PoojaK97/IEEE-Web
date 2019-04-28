@@ -80,7 +80,7 @@ class Chapters extends React.Component {
           </TabContainer>
 
           <TabContainer dir={theme.direction}>
-            <Typography>The Power & Energy Society (PES) provides the world’s largest forum for sharing the latest in technological developments in the electric power industry. It strives to advance innovation, education and applied research in both robotics and automation. Robotic research emphasises intelligence and adaptability to cope with unstructured environments.</Typography>
+            <Typography>RoboRit strives to advance innovation, education and applied research in both robotics and automation. Robotic research emphasises intelligence and adaptability to cope with unstructured environments.</Typography>
           </TabContainer>
 
           <TabContainer dir={theme.direction}>
