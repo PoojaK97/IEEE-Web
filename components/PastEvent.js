@@ -90,11 +90,12 @@ class PastEvent extends React.Component {
         <CardHeader
 
           title="PAST EVENTS"
+      image='/static/abc.HEIC'
           //subheader="sub"
         />
         <CardMedia
           className={classes.media}
-          title="Paella dish"
+         
         />
         <CardContent>
           <List
