@@ -66,7 +66,7 @@ class AboutCardy extends React.Component {
         />
         <CardMedia
           className={classes.media}
-          image="'/static/about.jpg'"
+          image='/static/about.jpg'
           
         />
         <CardContent>

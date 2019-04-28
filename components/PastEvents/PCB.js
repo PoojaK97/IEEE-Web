@@ -65,7 +65,7 @@ class PCB extends React.Component {
         />
         <CardMedia
           className={classes.media}
-          image="'/static/pcb.jpg"
+          image='/static/pcb.jpg'
 
         />
         <CardContent>
