@@ -23,6 +23,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import AboutCard from './AboutCard';
 
 export const styles = theme => ({
   card: {
@@ -104,28 +105,18 @@ class PastEvent extends React.Component {
                 <Collapse in={this.state.open1} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
                     <ListItem className={classes.nested} >
-                    <ListItemText inset primary="Debutant" secondary="This is for students who are new to robotics and have no prior experience in the field but
-                        are curious to explore the possibilities it offers.
-                        "/>
-                    </ListItem>
-                    <ListItem className={classes.nested}>
-                    <ListItemText inset primary="Specialiste" />
+                     <AboutCard/>
                     </ListItem>
                 </List>
                 </Collapse>
                 <ListItem button onClick={this.handleClick2}>
-                <ListItemText inset primary="WIE 2019" />
+                <ListItemText inset primary="WIE 2019" secondary="" />
                 {this.state.open2 ? <ExpandLess /> : <ExpandMore />}
                 </ListItem>
                 <Collapse in={this.state.open2} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
                     <ListItem className={classes.nested} >
-                    <ListItemText inset primary="Debutant" secondary="This is for students who are new to robotics and have no prior experience in the field but
-                        are curious to explore the possibilities it offers.
-                        "/>
-                    </ListItem>
-                    <ListItem className={classes.nested}>
-                    <ListItemText inset primary="Specialiste" />
+                    <AboutCard/>
                     </ListItem>
                 </List>
                 </Collapse>
@@ -136,12 +127,7 @@ class PastEvent extends React.Component {
                 <Collapse in={this.state.open3} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
                     <ListItem className={classes.nested} >
-                    <ListItemText inset primary="Debutant" secondary="This is for students who are new to robotics and have no prior experience in the field but
-                        are curious to explore the possibilities it offers.
-                        "/>
-                    </ListItem>
-                    <ListItem className={classes.nested}>
-                    <ListItemText inset primary="Specialiste" />
+                    <AboutCard/>
                     </ListItem>
                 </List>
                 </Collapse>
@@ -152,12 +138,7 @@ class PastEvent extends React.Component {
                 <Collapse in={this.state.open4} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
                     <ListItem className={classes.nested} >
-                    <ListItemText inset primary="Debutant" secondary="This is for students who are new to robotics and have no prior experience in the field but
-                        are curious to explore the possibilities it offers.
-                        "/>
-                    </ListItem>
-                    <ListItem className={classes.nested}>
-                    <ListItemText inset primary="Specialiste" />
+                    <AboutCard/>
                     </ListItem>
                 </List>
                 </Collapse>
@@ -168,11 +149,7 @@ class PastEvent extends React.Component {
                 <Collapse in={this.state.open5} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
                     <ListItem className={classes.nested} >
-                    <ListItemText inset primary="Debutant" secondary="This is for students who are new to robotics and have no prior experience in the field but
-                        are curious to explore the possibilities it offers.
-                        "/>
-                    </ListItem>
-                    <ListItem className={classes.nested}>
+                    <AboutCard/>
                     <ListItemText inset primary="Specialiste" />
                     </ListItem>
                 </List>
