@@ -6,7 +6,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
-import SwipeableTextMobileStepper from '../../components/carousel';
+import SwipeableTextMobileStepper from './wieC';
 
 export function TabContainer({ children, dir }) {
   return (
@@ -66,7 +66,7 @@ class WIE extends React.Component {
           index={this.state.value}
           onChangeIndex={this.handleChangeIndex}
         >
-          <SwipeableTextMobileStepper />
+          <SwipeableTextMobileStepper/>
           <TabContainer dir={theme.direction}>Item One</TabContainer>
           <TabContainer dir={theme.direction}>Item Two</TabContainer>
           <TabContainer dir={theme.direction}>Item Three</TabContainer>

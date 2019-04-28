@@ -12,13 +12,11 @@ import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import red from '@material-ui/core/colors/red';
-import SwipeableTextMobileStepper from './arduinoC';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import { ListItemIcon } from '@material-ui/core';
-import mcarousel from '../mcarousel';
 
 export const styles = theme => ({
   card: {
@@ -48,7 +46,7 @@ export const styles = theme => ({
   },
 });
 
-class Workshop extends React.Component {
+class AGM extends React.Component {
   state = { expanded: false };
 
   handleExpandClick = () => {
@@ -62,11 +60,15 @@ class Workshop extends React.Component {
       <Card className={classes.card}>
         <CardHeader
 
-          title="GALLERY"
+          title="About Us"
           //subheader="sub"
         />
+        <CardMedia
+          className={classes.media}
+          image=""
+          title="Paella dish"
+        />
         <CardContent>
-            <SwipeableTextMobileStepper/>
           <Typography component="p">
             One of the most prominent and dynamic society of Ramaiah Institute of Technology, IEEE RIT-B was inaugurated in the year 2003. Since then, it has made constant endeavors to enrich the students with the various happenings in the field of technology and research. It has ensured that the students’ competency meets all the required industry standards. Handled by a team of highly skilled members, collectively called the Exe-Coms, the club aspires to encourage students from various branches to actively participate and interact with people of different skill-set in their respective fields and therefore learn in the process.
 
@@ -77,8 +79,8 @@ class Workshop extends React.Component {
   }
 }
 
-Workshop.propTypes = {
+AGM.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Workshop);
+export default withStyles(styles)(AGM);
