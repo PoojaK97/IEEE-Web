@@ -12,6 +12,7 @@ import FullWidthTabs from './info';
 import {firebaseCloudMessaging} from '../components/webPush';
 import firebase from 'firebase/app';
 import 'firebase/auth';
+import PastEvent from '../components/PastEvent';
 
 export const styles = theme=>{
 
@@ -104,6 +105,7 @@ class Index extends React.Component{
         }}>jkhjk</button>}
         <MainCarousel/>
         <AboutCardy/>
+        <PastEvent/>
         <ExhibitionCard/>
       </ResponsiveDrawer>
     )
