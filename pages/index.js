@@ -6,6 +6,7 @@ import Info from '../components/info';
 import SwipeableTextMobileStepper from '../components/carousel';
 import AboutCardy from '../components/AboutCard';
 import ExhibitionCard from '../components/Exhibition';
+import SimpleBottomNavigation from '../components/bottom';
 import MainCarousel from '../components/mcarousel';
 import FullWidthTabs from './info';
 import {firebaseCloudMessaging} from '../components/webPush';

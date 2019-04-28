@@ -64,7 +64,7 @@ class AboutCardy extends React.Component {
         />
         <CardMedia
           className={classes.media}
-          image="/static/iconh.png"
+          image=""
           title="Paella dish"
         />
         <CardContent>
@@ -74,9 +74,6 @@ class AboutCardy extends React.Component {
           </Typography>
         </CardContent>
         <CardActions className={classes.actions} disableActionSpacing>
-          <IconButton aria-label="Share">
-            <ShareIcon />
-          </IconButton>
           <IconButton
             className={classnames(classes.expand, {
               [classes.expandOpen]: this.state.expanded,

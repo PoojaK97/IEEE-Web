@@ -62,11 +62,11 @@ class Chapters extends React.Component {
             textColor="primary"
             variant="fullWidth"
           >
-            <Tab label="Stages" />
-            <Tab label="Categories" />
-            <Tab label="Rules" />
-            <Tab label="Procedure" />
-            <Tab label="Payment" />
+            <Tab label="WIE" />
+            <Tab label="RoboRIT" />
+            <Tab label="PES" />
+            <Tab label="CIS" />
+            <Tab label="EMBS" />
           </Tabs>
         </AppBar>
         <SwipeableViews
