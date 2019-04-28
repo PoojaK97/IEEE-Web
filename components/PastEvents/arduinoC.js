@@ -10,61 +10,39 @@ import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 
-export const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-export const tutorialSteps = [
+const tutorialSteps = [
   {
-    label: 'San Francisco – Oakland Bay Bridge, United States',
+    label: 'ARDUINO WORKSHOP 2019',
     imgPath:
-      'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
+      'https://drive.google.com/uc?export=download&id=1KNKpYm5cGHXa7nVibb6NCMqbM8WkHJEm',
   },
   {
-    label: 'Bird',
+    label: 'ARDUINO WORKSHOP 2019',
     imgPath:
-      'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
+      'https://drive.google.com/uc?export=download&id=1elfADf7mBfdEsOv4ZFhdjxbkOt08VpuA',
   },
-  {
-    label: 'Bali, Indonesia',
-    imgPath:
-      'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80',
-  },
-  {
-    label: 'NeONBRAND Digital Marketing, Las Vegas, United States',
-    imgPath:
-      'https://images.unsplash.com/photo-1518732714860-b62714ce0c59?auto=format&fit=crop&w=400&h=250&q=60',
-  },
-  {
-    label: 'Goč, Serbia',
-    imgPath:
-      'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
-  },
+ 
+  
 ];
 
-export const styles = theme => ({
+const styles = theme => ({
   root: {
-    margin:'0',
-    padding:'0',
-    maxWidth: 800,
+    maxWidth: 400,
     flexGrow: 1,
-    flexShrink:1
   },
   header: {
-    display: 'block',
+    display: 'flex',
     alignItems: 'center',
-    height: 120,
-    paddingTop: '20px',
+    height: 50,
     paddingLeft: theme.spacing.unit * 4,
-    paddingRight: theme.spacing.unit * 4,
     backgroundColor: theme.palette.background.default,
-  },
-  imb:{
-    paddingRight:0,
-    width:'100%',
   },
   img: {
     height: 255,
     display: 'block',
-    maxWidth: 800,
+    maxWidth: 400,
     overflow: 'hidden',
     width: '100%',
   },
@@ -98,7 +76,9 @@ class SwipeableTextMobileStepper extends React.Component {
 
     return (
       <div className={classes.root}>
-
+        <Paper square elevation={0} className={classes.header}>
+          <Typography>{tutorialSteps[activeStep].label}</Typography>
+        </Paper>
         <AutoPlaySwipeableViews
           axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
           index={activeStep}
@@ -106,36 +86,31 @@ class SwipeableTextMobileStepper extends React.Component {
           enableMouseEvents
         >
           {tutorialSteps.map((step, index) => (
-            <div className={classes.imb} key={step.label}>
+            <div key={step.label}>
               {Math.abs(activeStep - index) <= 2 ? (
                 <img className={classes.img} src={step.imgPath} alt={step.label} />
               ) : null}
             </div>
           ))}
         </AutoPlaySwipeableViews>
-        <Paper square elevation={2} className={classes.header}>
-          <Typography variant='h5' component='h3'>{tutorialSteps[activeStep].label}</Typography>
-
-          <Typography variant='h6' paragraph>{'info'}</Typography>
-        </Paper>
-        {/* <MobileStepper
+        <MobileStepper
           steps={maxSteps}
           position="static"
           activeStep={activeStep}
           className={classes.mobileStepper}
           nextButton={
             <Button size="small" onClick={this.handleNext} disabled={activeStep === maxSteps - 1}>
-          Next
-          {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
+              Next
+              {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
             </Button>
           }
           backButton={
             <Button size="small" onClick={this.handleBack} disabled={activeStep === 0}>
-          {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-          Back
+              {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
+              Back
             </Button>
           }
-        /> */}
+        />
       </div>
     );
   }
@@ -147,3 +122,5 @@ SwipeableTextMobileStepper.propTypes = {
 };
 
 export default withStyles(styles, { withTheme: true })(SwipeableTextMobileStepper);
+
+
