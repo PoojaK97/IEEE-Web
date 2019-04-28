@@ -12,7 +12,7 @@ import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import red from '@material-ui/core/colors/red';
-import MainCarousel from '../mcarousel';
+import SwipeableTextMobileStepper from './arduinoC';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
@@ -66,7 +66,7 @@ class Workshop extends React.Component {
           //subheader="sub"
         />
         <CardContent>
-            <MainCarousel/>
+            <SwipeableTextMobileStepper/>
           <Typography component="p">
             One of the most prominent and dynamic society of Ramaiah Institute of Technology, IEEE RIT-B was inaugurated in the year 2003. Since then, it has made constant endeavors to enrich the students with the various happenings in the field of technology and research. It has ensured that the students’ competency meets all the required industry standards. Handled by a team of highly skilled members, collectively called the Exe-Coms, the club aspires to encourage students from various branches to actively participate and interact with people of different skill-set in their respective fields and therefore learn in the process.
 

@@ -27,6 +27,7 @@ import AboutCard from './AboutCard';
 import WIE from './PastEvents/WIE';
 import PCB from './PastEvents/PCB';
 import AGM from './PastEvents/AGM';
+import Aavishkaar from './PastEvents/Aavishkaar';
 import Workshop from './PastEvents/Workshop';
 
 export const styles = theme => ({
@@ -152,8 +153,7 @@ class PastEvent extends React.Component {
                 <Collapse in={this.state.open5} timeout="auto" unmountOnExit>
                   <List component="div" disablePadding>
                       <ListItem className={classes.nested} >
-                      <AboutCard/>
-                      <ListItemText  primary="Specialiste" />
+                      <Aavishkaar/>
                       </ListItem>
                   </List>
                 </Collapse>
