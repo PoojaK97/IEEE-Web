@@ -70,7 +70,7 @@ class FullWidthTabs extends React.Component {
           onChangeIndex={this.handleChangeIndex}
         >
 
-          <TabContainer dir={theme.direction}>1
+          <TabContainer dir={theme.direction}>13787
           </TabContainer>
 
           <TabContainer dir={theme.direction}>2

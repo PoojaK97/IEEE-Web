@@ -13,7 +13,7 @@ import MailIcon from '@material-ui/icons/Mail';
 import Typography from '@material-ui/core/Typography';
 export const styles = {
   list: {
-    width: 250,
+    width: '100%',
   },
   fullList: {
     width: 'auto',

@@ -47,8 +47,6 @@ class MyApp extends App {
             theme={this.pageContext.theme}
             sheetsManager={this.pageContext.sheetsManager}
           >
-            <MenuAppBar />
-            <div style={{height:30}}></div>
             {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
             <CssBaseline />
             {/* Pass pageContext to the _document though the renderPage enhancer

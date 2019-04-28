@@ -45,6 +45,7 @@ const styles = theme => ({
   },
   menuButton: {
     marginRight: 20,
+    backgroundColorcolor:'black',
     [theme.breakpoints.up('md')]: {
       display: 'none',
     },
@@ -59,7 +60,7 @@ const styles = theme => ({
   content: {
     flexGrow: 1,
     padding: theme.spacing.unit * 3,
-    marginTop:'70px'
+    marginTop:'20px'
   },
   bottom:{
     width:'100%',
@@ -120,14 +121,14 @@ class ResponsiveDrawer extends React.Component {
           <AppBar position="fixed" className={classes.appBar}>
             <Toolbar>
               <IconButton
-                color="inherit"
+                color="default"
                 aria-label="Open drawer"
                 onClick={this.handleDrawerToggle}
                 className={classes.menuButton}
               >
                 <MenuIcon />
               </IconButton>
-              <img height='50px' src='/static/iconh.png'></img>
+              <img height='50px' src='/static/icon.jpg'></img>
             </Toolbar>
           </AppBar>
           <nav className={classes.drawer}>
