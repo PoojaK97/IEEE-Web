@@ -67,10 +67,13 @@ class Workshop extends React.Component {
         />
         <CardContent>
             <SwipeableTextMobileStepper/>
-          <Typography component="p">
-            One of the most prominent and dynamic society of Ramaiah Institute of Technology, IEEE RIT-B was inaugurated in the year 2003. Since then, it has made constant endeavors to enrich the students with the various happenings in the field of technology and research. It has ensured that the students’ competency meets all the required industry standards. Handled by a team of highly skilled members, collectively called the Exe-Coms, the club aspires to encourage students from various branches to actively participate and interact with people of different skill-set in their respective fields and therefore learn in the process.
+          <p href="http://ieeeritb.in/files/2019/03/Arduino-workshop.pdf">
 
-          </Typography>
+          HANDS ON PDF:
+          http://ieeeritb.in/files/2019/03/Arduino-workshop.pdf</p>
+
+          <p >LIST OF PROJECTS FOR BEGINNERS:
+          https://drive.google.com/file/d/1wRCpFkILzgplMPV7BZIHWp_O6Cv5fzUj/view?usp=sharing</p>
         </CardContent>
       </Card>
     );
