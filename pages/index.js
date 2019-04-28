@@ -76,8 +76,6 @@ class Index extends React.Component{
   }
 
   componentDidMount(){
-    firebaseCloudMessaging.init();
-
     var user=JSON.parse(localStorage.getItem('User'))
     if (user!==null){
       this.setState({
@@ -95,7 +93,7 @@ class Index extends React.Component{
       <ResponsiveDrawer notification={this.state.notification} subscribe={this.subscribe} loggedIn={this.loggedIn}
         login={this.login} User={this.state.User}>
         <div style={{'width':'85vw','margin':'auto','display':'flexShrink'}}>
-          <MainCarousel/>
+          <MainCarousel />
           <AboutCardy/>
           <PastEvent/>
           <ExhibitionCard/>

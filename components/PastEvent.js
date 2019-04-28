@@ -139,29 +139,31 @@ class PastEvent extends React.Component {
                   </List>
                 </Collapse>
                 <ListItem button onClick={this.handleClick4}>
-                <ListItemText  primary="AGM MEET 2019" />
-                {this.state.open4 ? <ExpandLess /> : <ExpandMore />}
+                  <ListItemText  primary="AGM MEET 2019" />
+                  {this.state.open4 ? <ExpandLess /> : <ExpandMore />}
                 </ListItem>
                 <Collapse in={this.state.open4} timeout="auto" unmountOnExit>
-                <List component="div" disablePadding>
+                  <List component="div" disablePadding>
                     <ListItem className={classes.nested} >
-                    <AboutCard/>
+                      <AboutCard/>
                     </ListItem>
-                </List>
+                  </List>
                 </Collapse>
                 <ListItem button onClick={this.handleClick5}>
-                <ListItemText  primary="AAVISHKAAR 2018" />
-                {this.state.open5 ? <ExpandLess /> : <ExpandMore />}
+                  <ListItemText  primary="AAVISHKAAR 2018" />
+                  {this.state.open5 ? <ExpandLess /> : <ExpandMore />}
                 </ListItem>
                 <Collapse in={this.state.open5} timeout="auto" unmountOnExit>
-                <List component="div" disablePadding>
+                  <List component="div" disablePadding>
                     <ListItem className={classes.nested} >
-                    <AboutCard/>
-                    <ListItemText  primary="Specialiste" />
+                      <AboutCard/>
+                      <ListItemText  primary="Specialiste" />
                     </ListItem>
-                </List>
+                  </List>
                 </Collapse>
-                </List>
+              </List>
+            </Collapse>
+          </List>
         </CardContent>
       </Card>
     );
