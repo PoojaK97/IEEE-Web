@@ -67,9 +67,9 @@ class WIE extends React.Component {
           onChangeIndex={this.handleChangeIndex}
         >
           <SwipeableTextMobileStepper/>
-          <TabContainer dir={theme.direction}>Item One</TabContainer>
-          <TabContainer dir={theme.direction}>Item Two</TabContainer>
-          <TabContainer dir={theme.direction}>Item Three</TabContainer>
+          <TabContainer dir={theme.direction}><CardMedia></CardMedia></TabContainer>
+          <TabContainer dir={theme.direction}>image='/static/ww.jpg'</TabContainer>
+          <TabContainer dir={theme.direction}>image='/static/ww2.jpg'</TabContainer>
         </SwipeableViews>
       </div>
     );
