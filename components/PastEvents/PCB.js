@@ -60,17 +60,13 @@ class PCB extends React.Component {
       <Card className={classes.card}>
         <CardHeader
 
-<<<<<<< HEAD
           title="PRINTED CIRCUIT BOARD WORKSHOP"
-=======
-          title="PCB WORKSHOP"
->>>>>>> 76ca59854353901e716c3aeb8bd8e6a3973c26f9
-          //subheader="sub"
+
         />
         <CardMedia
           className={classes.media}
           image="'/static/pcb.jpg"
-         
+
         />
         <CardContent>
           <Typography component="p">
