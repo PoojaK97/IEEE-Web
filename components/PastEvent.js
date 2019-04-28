@@ -61,14 +61,15 @@ class PastEvent extends React.Component {
           title="PAST EVENTS"
           //subheader="sub"
         />
+        <CardMedia
+          className={classes.media}
+          image=""
+          title="Paella dish"
+        />
         <CardContent>
-          <Typography component="p">
-            This impressive paella is a perfect party dish and a fun meal to cook together with your
-            guests. Add 1 cup of frozen peas along with the mussels, if you like.
-          </Typography>
         </CardContent>
         <CardActions className={classes.actions} disableActionSpacing>
-          <Typography variant='h7' margin='auto'>IEEE RIT-B CHAPTERS</Typography>
+          <Typography variant='h7' margin='auto'>ARDUINO WORKSHOP</Typography>
           <IconButton
             className={classnames(classes.expand, {
               [classes.expandOpen]: this.state.expanded,

@@ -75,7 +75,7 @@ export const styles = theme => ({
     display: 'flex',
     maxWidth: 700,
     overflow: 'hidden',
-    width: '100%',
+    width: '200%',
   },
 });
 
