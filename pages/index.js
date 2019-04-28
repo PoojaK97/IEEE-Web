@@ -4,6 +4,9 @@ import { withStyles } from '@material-ui/core/styles';
 import ResponsiveDrawer from '../components/test';
 import Info from '../components/info';
 import SwipeableTextMobileStepper from '../components/carousel';
+import AboutCardy from '../components/AboutCard';
+import ExhibitionCard from '../components/Exhibition';
+import MainCarousel from '../components/mcarousel';
 import FullWidthTabs from './info';
 import {firebaseCloudMessaging} from '../components/webPush';
 import firebase from 'firebase/app';
@@ -98,8 +101,9 @@ class Index extends React.Component{
           .then(() => console.log('Successful share'))
           .catch((error) => console.log('Error sharing', error));
         }}>jkhjk</button>}
-        {/* <SwipeableTextMobileStepper /> */}
-        <FullWidthTabs />
+        <MainCarousel/>
+        <AboutCardy/>
+        <ExhibitionCard/>
       </ResponsiveDrawer>
     )
   }
