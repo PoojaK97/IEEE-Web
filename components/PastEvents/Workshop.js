@@ -62,7 +62,7 @@ class Workshop extends React.Component {
       <Card className={classes.card}>
         <CardHeader
 
-          title="GALLERY"
+          title="ARDUINO WORKSHOP 2019"
           //subheader="sub"
         />
         <CardContent>
