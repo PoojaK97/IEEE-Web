@@ -60,13 +60,13 @@ class AGM extends React.Component {
       <Card className={classes.card}>
         <CardHeader
 
-          title="About Us"
+          title="ANNUAL GENERAL MEETING"
           //subheader="sub"
         />
         <CardMedia
           className={classes.media}
-          image=""
-          title="Paella dish"
+          image="'/static/AGM.png"
+         
         />
         <CardContent>
           <Typography component="p">
